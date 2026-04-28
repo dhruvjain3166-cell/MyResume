@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Dhruv Jain – Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    background: #f2f5f9;
+    padding: 30px 12px;
+    color: #1a1a2e;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.13);
+    border-top: 7px solid #1a3a5c;
+    animation: rise 0.5s ease both;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── HEADER ── */
+  .header {
+    text-align: center;
+    background: #1a3a5c;
+    color: #fff;
+    padding: 32px 24px 24px;
+  }
+
+  .photo-wrap {
+    margin-bottom: 14px;
+  }
+
+  .photo-wrap img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid #4a9fd4;
+    object-fit: cover;
+    background: #2e5f8a;
+  }
+
+  /* Placeholder avatar if no image */
+  .avatar-placeholder {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid #4a9fd4;
+    background: #2e5f8a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6rem;
+    color: #a8d4ef;
+    margin-bottom: 0;
+  }
+
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+
+  .header .role {
+    font-size: 0.88rem;
+    color: #90c4e4;
+    margin-bottom: 14px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+
+  .contact-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 22px;
+    font-size: 0.80rem;
+    color: #b8d8ee;
+  }
+
+  /* ── BODY ── */
+  .body {
+    display: table;
+    width: 100%;
+  }
+
+  .sidebar {
+    display: table-cell;
+    width: 210px;
+    background: #eef4fb;
+    padding: 24px 18px;
+    vertical-align: top;
+    border-right: 2px solid #cde0f0;
+  }
+
+  .main {
+    display: table-cell;
+    padding: 24px 28px;
+    vertical-align: top;
+  }
+
+  /* ── SECTION HEADING ── */
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: #1a3a5c;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    border-bottom: 2px solid #cde0f0;
+    padding-bottom: 5px;
+    margin-bottom: 13px;
+  }
+
+  .section { margin-bottom: 22px; }
+
+  /* ── SIDEBAR ITEMS ── */
+  .tag {
+    display: inline-block;
+    background: #cde6f7;
+    color: #1a3a5c;
+    font-size: 0.73rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 3px;
+    margin: 3px 2px;
+  }
+
+  .edu-item { margin-bottom: 13px; font-size: 0.82rem; }
+  .edu-item .school { font-weight: 600; color: #1a3a5c; }
+  .edu-item .degree { color: #444; margin-top: 2px; }
+  .edu-item .year   { color: #2e86c1; font-weight: 600; font-size: 0.75rem; margin-top: 2px; }
+
+  .hobby-list { list-style: none; font-size: 0.82rem; }
+  .hobby-list li { padding: 3px 0; color: #333; }
+  .hobby-list li::before { content: "▸ "; color: #2e86c1; }
+
+  /* ── OBJECTIVE ── */
+  .objective {
+    font-size: 0.84rem;
+    line-height: 1.75;
+    color: #444;
+    background: #eef4fb;
+    border-left: 4px solid #2e86c1;
+    padding: 11px 15px;
+    margin-bottom: 22px;
+  }
+
+  /* ── TABLE ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.80rem;
+  }
+  table thead tr { background: #1a3a5c; color: #fff; }
+  table thead th { padding: 8px 11px; text-align: left; font-weight: 600; letter-spacing: 0.4px; }
+  table tbody tr:nth-child(even) { background: #eef4fb; }
+  table tbody tr:nth-child(odd)  { background: #fff; }
+  table tbody tr:hover { background: #d4eaf7; }
+  table td {
+    padding: 9px 11px;
+    vertical-align: top;
+    border-bottom: 1px solid #cde0f0;
+    line-height: 1.5;
+    color: #222;
+  }
+  table td.label { font-weight: 600; white-space: nowrap; color: #1a3a5c; }
+
+  .badge {
+    display: inline-block;
+    background: #2e86c1;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 2px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .badge.green { background: #1e8449; }
+  .badge.orange { background: #ca6f1e; }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    font-size: 0.72rem;
+    color: #999;
+    padding: 14px;
+    border-top: 1px solid #e0ecf5;
+  }
+
+  /* ── MOBILE RESPONSIVE ── */
+  @media (max-width: 700px) {
+    body { padding: 0; background: #fff; }
+
+    .page {
+      box-shadow: none;
+      border-top: 5px solid #1a3a5c;
+      border-radius: 0;
+    }
+
+    /* Header */
+    .header { padding: 24px 16px 20px; }
+    .header h1 { font-size: 1.6rem; }
+    .header .role { font-size: 0.80rem; }
+    .avatar-placeholder { width: 85px; height: 85px; font-size: 2rem; }
+    .contact-bar {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.76rem;
+    }
+
+    /* Stack sidebar above main on mobile */
+    .body { display: flex; flex-direction: column; }
+    .sidebar {
+      display: block;
+      width: 100%;
+      border-right: none;
+      border-bottom: 3px solid #cde0f0;
+      padding: 20px 16px;
+    }
+    .main {
+      display: block;
+      width: 100%;
+      padding: 20px 16px;
+    }
+
+    /* Section titles */
+    h2 { font-size: 0.85rem; letter-spacing: 1.4px; }
+
+    /* Tags wrap nicely */
+    .tag { font-size: 0.70rem; padding: 4px 8px; margin: 3px 2px; }
+
+    /* Tables — make them stack like cards on mobile */
+    table, thead, tbody, th, td, tr { display: block; }
+    table thead { display: none; } /* hide header row */
+    table tbody tr {
+      background: #fff;
+      border: 1px solid #cde0f0;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      padding: 10px 12px;
+    }
+    table tbody tr:nth-child(even) { background: #f5faff; }
+    table td {
+      border: none;
+      padding: 3px 0;
+      font-size: 0.80rem;
+      white-space: normal;
+    }
+    table td.label {
+      font-size: 0.85rem;
+      color: #1a3a5c;
+      margin-bottom: 4px;
+      white-space: normal;
+    }
+    /* Add data-label pseudo headers */
+    table td::before {
+      content: attr(data-label);
+      font-weight: 700;
+      color: #2e86c1;
+      font-size: 0.70rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* Objective */
+    .objective { font-size: 0.82rem; padding: 10px 12px; }
+
+    /* Footer */
+    .footer { font-size: 0.68rem; padding: 12px 10px; }
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="photo-wrap">
+      <!-- Uses your image file if present, falls back to initials -->
+      <div class="avatar-placeholder">DJ</div>
+    </div>
+    <h1>Dhruv Jain</h1>
+    <div class="role">AI &amp; Data Science Student &nbsp;|&nbsp; Web Developer &nbsp;|&nbsp; Cloud Learner</div>
+    <div class="contact-bar">
+      <span>✉ dhruvjain3166@gmail.com</span>
+      <span>📞 +91 98757 72810</span>
+      <span>📍 Dungarpur, Rajasthan</span>
+      <span>🔗 linkedin.com/in/dhruv-jain-b4a730392</span>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <div class="section">
+        <h2>Education</h2>
+
+        <div class="edu-item">
+          <div class="school">Parul Institute of Engineering &amp; Technology</div>
+          <div class="degree">B.Tech – AI &amp; Data Science</div>
+          <div class="year">2024 – 2028 (Pursuing)</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="school">Higher Secondary (12th)</div>
+          <div class="degree">Science Stream</div>
+          <div class="year">Completed 2025</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Tech Skills</h2>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">C</span>
+        <span class="tag">Python</span>
+        <span class="tag">Java</span>
+        <span class="tag">AWS Cloud</span>
+        <span class="tag">AI / ML Basics</span>
+        <span class="tag">Data Science</span>
+      </div>
+
+      <div class="section">
+        <h2>Soft Skills</h2>
+        <span class="tag">Problem Solving</span>
+        <span class="tag">Teamwork</span>
+        <span class="tag">Creativity</span>
+        <span class="tag">Communication</span>
+        <span class="tag">Quick Learner</span>
+      </div>
+
+      <div class="section">
+        <h2>Hobbies</h2>
+        <ul class="hobby-list">
+          <li>Reading</li>
+          <li>Learning new tech</li>
+          <li>Traveling</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Languages</h2>
+        <span class="tag">Hindi</span>
+        <span class="tag">English</span>
+      </div>
+
+    </div><!-- /sidebar -->
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- OBJECTIVE -->
+      <div class="objective">
+        Motivated B.Tech student in AI &amp; Data Science at Parul University, with hands-on experience in web development and cloud technologies. Certified in HTML &amp; CSS and AWS Cloud Foundations. Proven ability to work in competitive environments as a National Finalist at HackWise IEEE (IIM Indore). Eager to secure a challenging role to expand my skills and contribute meaningfully to a dynamic team.
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="section">
+        <h2>Certifications</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Certificate</th>
+              <th>Issued By</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="label" data-label="Certificate">HTML &amp; CSS – IT Specialist</td>
+              <td data-label="Issued By">Certiport / Pearson VUE</td>
+              <td data-label="Year">2025</td>
+            </tr>
+            <tr>
+              <td class="label" data-label="Certificate">AWS Academy Cloud Foundations</td>
+              <td data-label="Issued By">Amazon Web Services</td>
+              <td data-label="Year">2026</td>
+            </tr>
+            <tr>
+              <td class="label" data-label="Certificate">AI Workshop – Gemini &amp; Beyond</td>
+              <td data-label="Issued By">Google NXT HUB, Parul University</td>
+              <td data-label="Year">2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ACHIEVEMENTS -->
+      <div class="section">
+        <h2>Achievements &amp; Events</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="label" data-label="Event">
+                <div class="badge green">National Finalist</div><br>
+                HackWise IEEE<br><small>IIM Indore, Jan 2026</small>
+              </td>
+              <td data-label="Details">Selected as a National Finalist at HackWise IEEE (IRIS '26), IIM Indore. Competed against top teams from across India on real-world tech problem statements, demonstrating strong innovation and collaborative skills.</td>
+            </tr>
+            <tr>
+              <td class="label" data-label="Event">
+                <div class="badge orange">Participant</div><br>
+                Vadodara Hackathon 6.0<br><small>Sep 2025</small>
+              </td>
+              <td data-label="Details">Participated in Vadodara Hackathon 6.0 organized by Parul Innovation &amp; Entrepreneurship Research Centre — a multi-day event focused on solving real-world problems through creativity and teamwork.</td>
+            </tr>
+            <tr>
+              <td class="label" data-label="Event">
+                <div class="badge">Workshop</div><br>
+                Google AI Workshop<br><small>Mar 2025</small>
+              </td>
+              <td data-label="Details">Attended "Gemini &amp; Beyond: Your AI Toolkit for Success" by Google Student Ambassadors at Parul University. Gained practical skills in AI tools, research summarization, and building AI-powered assistants.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="section">
+        <h2>Experience</h2>
+        <table>
+          <thead>
+            <tr><th>Area</th><th>Details</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="label" data-label="Area">Web Development</td>
+              <td data-label="Details">Built responsive websites using HTML, CSS &amp; JavaScript. Earned official IT Specialist Certification in HTML &amp; CSS by Certiport/Pearson VUE (Oct 2025).</td>
+            </tr>
+            <tr>
+              <td class="label" data-label="Area">Cloud Computing</td>
+              <td data-label="Details">Completed 20-hour AWS Academy Cloud Foundations program (Mar 2026). Gained foundational knowledge of AWS services and cloud architecture concepts.</td>
+            </tr>
+            <tr>
+              <td class="label" data-label="Area">AI &amp; Data Science</td>
+              <td data-label="Details">Actively studying AI/ML concepts through B.Tech coursework and self-learning. Applied AI knowledge in hackathon environments and Google AI workshops.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div><!-- /main -->
+  </div><!-- /body -->
+
+  <div class="footer">
+    Dhruv Jain &nbsp;•&nbsp; AI &amp; Data Science Student &nbsp;•&nbsp; Parul University, Vadodara &nbsp;•&nbsp; 2026
+  </div>
+
+</div>
+</body>
+</html>
